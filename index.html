@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI PROJECT REVOU</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GOOGLE FONT LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header navigation -->
+    <div id="header">
+        <div><img src="assets/logo.svg" alt="logo"></div>
+        <div>
+            <nav id="nav">
+                <a href="#home">HOME</a>
+                <a href="#aboutme">ABOUT ME</a>
+                <a href="#portofolio">PORTOFOLIO</a>
+                <a href="#message-us">MESSAGE ME</a>
+            </nav>
+        </div>
+        <div id="btn-nav" class="btn-nav dosis">MENU</div>
+    </div>
+
+    <!-- main navigation -->    
+    <main class="main-content">
+
+    <!-- home -->
+    <div id="home" class="wrapper col-12">
+        <div class="home-bg"></div>
+        <div class="home-desc">
+            <h1 class="lg-text-l">Tosy Bima Asadulloh Mustofa <span class="lg-text-m">Freelance Web Developer and Grapich Designer</span>
+            </h1>
+        </div>
+    </div>
+    <hr>
+
+    <!-- ABOUT ME -->
+    <div class="about-me" id="aboutme">
+            <header class="title-about"><h1>ABOUT ME</h1></header>
+            <article class="content">
+                <p>Perkenalkan, nama saya TOSY BIMA ASADULLOH MUSTOFA, biasa dipanggil Tosy, Bima. Status saya saat ini yaitu adalah FRESH GRADUATE SMA. Saya Bersekolah di SMA swasta bernama SMA BUDI LUHUR yang letaknya ada di Kota Samarinda, Kalimantan Timur. Saya mengambil kelas MIPA (Matematika Ilmu Pengetahuan Alam). Saat ini saya sedang mengikuti kursus-kursus online seperti Fundamental SE RevoU ini, dengan harapan bisa menjadi Software Engginer yang Handal dan diterima di Perusahaan yang besar nantinya. <strong>KEEP STRONG🔥</strong></p>
+            </article>
+    </div>
+    <hr>     
+
+    <!-- PORTOFOLIO -->
+    <div class="banner-content" id="portofolio">
+        <header>
+            <h1>PORTOFOLIO</h1>
+        </header>
+
+    <!-- IMAGES SLIDES -->
+        <div class="slideshow-content">
+            <img class="img-slideshow" src="assets/1.jpg"/>
+            <img class="img-slideshow" src="assets/3.jpg"/>
+            <img class="img-slideshow" src="assets/4.jpg"/>
+            <img class="img-slideshow" src="assets/5.jpg"/>
+            <img class="img-slideshow" src="assets/7.jpg"/>
+            <img class="img-slideshow" src="assets/8.jpg"/>
+            <img class="img-slideshow" src="assets/6.jpg"/>
+            <img class="img-slideshow" src="assets/9.jpg"/>
+            <img class="img-slideshow" src="assets/10.jpg"/>
+
+            <div class="portofolio-button">
+                <button onclick="plusDivs(-1)">Previous</button>
+                <button onclick="plusDivs(1)">Next</button>
+            </div>
+        </div>    
+    </div>
+    <hr>    
+
+    <!-- MESSAGE ME SECTION -->
+    <section class="message-container" id="message-us">
+        <header>
+            <h1>MESSAGE ME</h1>
+        </header>
+        
+    <!-- MESSAGE CONTENT -->
+    <article>
+        <div class="form-container">
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="name">Name : </label>
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date Of Birth : </label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label>Gender :</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="Laki Laki">
+                        <label for="male">Man</label> 
+                        <input type="radio" id="female" name="gender" value="Perempuan">
+                        <label for="female">Woman</label> 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- OUTPUT FORM -->
+        <div class="output-container">
+            <h3>MESSAGE OUTPUT :</h3>
+            <div id="output"></div>
+            </div>
+    </article>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-styling">
+            <h2 class="judul-footer">FROM TOSY BIMA ASADULLOH MUSTOFA TO REVOU</h2>
+            <p class="desc-footer">semoga suka dengan hasil projectnya Terima Kasih!</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT SOURCE -->
+    <script src="js/script.js"></script>
+</body>
+</html>

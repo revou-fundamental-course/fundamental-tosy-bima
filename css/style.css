@@ -1,0 +1,621 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Ubuntu", Tahoma , Verdana, sans-serif;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #fff;
+    margin: 0px;
+
+    background-color: burlywood;
+    background-image: url("../assets/shattered.png");
+    background-repeat: repeat;
+}
+
+.icon-medsos {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* HEADER */
+
+#header {
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    background-color: rgba(245, 222, 179, 0.288);
+    backdrop-filter: blur(16px);
+    border-bottom: 2px solid rgba(34, 24, 28, 1);
+}
+
+#header img {
+    width: 4rem;
+    margin-left: 2rem;
+}
+
+nav {
+    margin-right: 2rem;
+    display: flex;
+    border: 1px solid #22181c;
+    background-color: rgba(245, 222, 179, 1) !important;
+
+    /* backdrop-filter: blur(16px); */
+    border-radius: 16px;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+nav>a {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: #22181c;
+    font-weight: 100;
+    min-width: 6rem;
+}
+
+nav>a:hover,
+nav>a:focus {
+    background-color: wheat !important;
+    cursor: pointer;
+    overflow: hidden;
+    color: wheat;
+    font-weight: bold;
+
+    box-shadow: inset 10rem 0px rgb(34, 24, 28, 0.8);
+
+
+    animation: animate-nav;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+input[type=submit],
+button,
+.btn-nav {
+    width: 5rem;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: wheat;
+    text-decoration: none;
+    color: #22181c;
+    font-weight: 100;
+    border: 1px #22181c solid;
+    text-align: center;
+    overflow: hidden;
+    min-width: 9rem;
+}
+
+input[type=submit]:hover,
+button:hover,
+.btn-nav:hover,
+input[type=submit]:focus,
+button:focus,
+.btn-nav:focus {
+    cursor: pointer;
+    color: wheat;
+    font-weight: 900;
+    backdrop-filter: blur(8px);
+    border: 1px wheat solid;
+    box-shadow: inset 12rem 0px rgb(34, 24, 28, .8);
+    animation: animate-button;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in;
+}
+
+.btn-nav {
+    display: none;
+    margin-right: 2rem;
+}
+
+
+/* HOME */
+.home-bg {
+    background-image: url("../assets/home.jpg");
+    background-size: cover;
+    background-position: top right;
+    /* filter: blur(2px); */
+    height: 700px;
+    width: 100%;
+}
+
+.home-desc {
+    font-size: large;
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+}
+
+.lg-text-l{
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    padding-left: 3px;
+}
+
+.lg-text-l span {
+    margin-top: 5px;
+    font-size: 25px;
+    color: wheat;
+    word-spacing: 1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+
+    -webkit-text-stroke-color: wheat;
+    display: flex;
+    justify-content: center;
+}
+
+/* Header Responsive */
+@media only screen and (max-width: 1024px) {
+    .wrapper-responsive {
+        flex-direction: column;
+    }
+
+    .title {
+        width: 80vw;
+    }
+
+    .left {
+        text-align: center;
+    }
+
+    .active {
+        display: block;
+    }
+    
+    /* home responsive */
+
+    .btn-nav {
+        display: block;
+        font-size: 13px;
+        padding: 10px;
+        margin-right: 1em;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        width: 60vw;
+        z-index: 1000;
+        margin: 0;
+        animation-name: animate-message-result;
+        animation-duration: 500ms;
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    nav>a {
+        padding: 1rem 1rem;
+    }
+
+    nav>a:hover,
+    nav>a:focus {
+        animation-name: animate-nav-vertical;
+        box-shadow: inset 50vw 0rem rgba(34, 24, 28, 0.8);
+    }
+    
+    .home-desc {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 1rem;
+        top: 1rem;
+        bottom: 0rem;
+        right: 7rem;
+    }
+
+    .home-bg{
+        width: 100%;
+    }
+
+    .lg:p-0 {
+        padding: 0rem !important
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .lg-text-l {
+        width: 450px;
+        font-size: 0.8em !important;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        margin-left: 10px;
+    }
+
+    .lg-text-m {
+        font-size: 3vw !important;
+    }
+}
+
+@keyframes animate-message-result {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes animate-button {
+    0% {
+        box-shadow: inset 0rem 0px rgb(34, 24, 28, 0);
+
+
+    }
+
+    100% {
+        box-shadow: inset 10rem 0px rgb(34, 24, 28, .8);
+
+
+    }
+}
+
+@keyframes animate-nav {
+    0% {
+        box-shadow: inset 0rem 0px rgb(34, 24, 28, 0);
+
+
+    }
+
+    0% {
+        box-shadow: inset 5rem 0px rgb(34, 24, 28, 0.5);
+
+
+    }
+
+    100% {
+        box-shadow: inset 10rem 0px rgb(34, 24, 28, 0.8);
+
+
+    }
+}
+
+@keyframes animate-nav-vertical {
+    0% {
+        box-shadow: inset 0rem 0px rgb(34, 24, 28, 0);
+
+
+    }
+
+    0% {
+        box-shadow: inset 25vw 0px rgb(34, 24, 28, 0.5);
+
+
+    }
+
+    100% {
+        box-shadow: inset 50vw 0px rgb(34, 24, 28, 0.8);
+
+
+    }
+}
+
+/* Heading
+   ----------------------------- */
+h4 {
+    margin-top: 5px;
+    font-size: 15px;
+    color: white;
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Dosis", sans-serif;
+    font-weight: 600;
+}
+
+/* ABOUT ME */
+.about-me {
+    padding: 20px 70px 70px 70px;
+}
+
+.title-about {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: rgb(34, 24, 28, 0.8);
+}
+
+.content > p {
+    font-size: 27px;
+    text-align: justify;
+    line-height: 25px;
+    color: wheat;
+    text-transform: lowercase;
+}
+
+@media only screen and (max-width: 1024px){
+    .title-about{
+        font-size: 0.8em;
+    }
+
+   .content > p{
+        font-size: 0.9em;
+        line-height: 17px;
+    }
+}
+
+/* PORTOFOLIO */
+.banner-content{
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px 70px;
+    color: rgb(34, 24, 28, 0.8);
+    text-align: center;
+}
+
+.banner-content .slideshow-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 100px;
+}
+
+#portofolio.banner-content .slideshow-content .portofolio-button > button{
+    padding: 13px 250px;
+    font-size: 25px;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    margin: 20px 5px 0px 5px;
+    border-radius: 50px;
+    background-color: wheat;
+}
+
+#portofolio.banner-content .slideshow-content .portofolio-button > button:hover{
+    background-color: rgb(34, 24, 28, 0.8);
+    color: #fff;
+}
+
+@media only screen and (max-width: 1024px) {
+    .banner-content{
+        font-size: 10px;
+        font-weight: bold;
+        padding: 10px;
+        color: rgb(34, 24, 28, 0.8);
+        text-align: center;
+    }
+
+    .banner-content .slideshow-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        align-items: center;
+    }
+
+    .banner-content .slideshow-content > img{
+        width: 300px;
+    }
+    
+
+    #portofolio.banner-content .slideshow-content .portofolio-button > button{
+        padding: 10px;
+        font-size: 15px;
+        font-family: 'Ubuntu';
+        font-weight: bold;
+        margin: 15px 1px 0px 1px;
+        border-radius: 50px;
+        background-color: wheat;
+        color: rgb(34, 24, 28, 0.8);
+    }
+}
+
+/* Message Us */
+
+.message-container {
+    margin: 10px 152px;
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+
+}
+.message-container h1 {
+    /* justify-content: center; */
+    font-size: 2em;
+}
+
+.message-container header {
+    margin-bottom: 20px;
+    color: rgb(34, 24, 28, 0.8);
+}
+
+.message-container article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-container, .output-container {
+    background-color: wheat;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    color: rgb(34, 24, 28, 0.8);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-group textarea {
+    font-size: 1em;
+    height: 200px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+
+button {
+    font-family: 'Ubuntu', sans-serif;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: rgb(34, 24, 28, 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 12px 2px 14px 0 salmon;
+}
+
+.output-container {
+    background-color: wheat;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.output-container h3 {
+    margin-top: 0;
+}
+
+.output-container p {
+    margin: 10px 0;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .message-container{
+        margin: 0px;
+        align-items: center;
+        width: 90%;
+        padding-left: 12px;
+        padding-right: 25px;
+    }
+
+    .message-container h1 {
+        /* justify-content: center; */
+        font-size: 22px;
+        margin: 0px;
+    }
+
+    .form-group > label{
+        font-size: 0.7em;
+    }
+
+    .form-group input + label{
+        font-size: 0.7em;
+    }
+
+    button{
+        font-size: 0.5em;
+    }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .message-container article {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form-container, .output-container {
+        width: 48%;
+    }
+}
+
+@media (max-width: 767px) {
+    .message-container article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .output-container {
+        width: 100%;
+    }
+}
+
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-image: url(../assets/shattered.png);
+}
+footer h2{
+    color: rgb(34, 24, 28, 0.8);
+}
+
+footer p {
+    color: black;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        width: 100%;
+    }
+
+    footer h2{
+        font-size: 9px;
+    }
+
+    footer p{
+        font-size: 8px;
+    }
+}
